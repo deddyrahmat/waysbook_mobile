@@ -55,6 +55,7 @@ const {width: screenWidth} = Dimensions.get('window');
 
 const Home = (props) => {
 
+  const {navigation} = props;
   // untuk menghilangkan back arrow di header
   // props.navigation.setOptions({
   //   headerLeft: () => {
@@ -99,6 +100,7 @@ const Home = (props) => {
     setEntries(ENTRIES1);
   }, []);
 
+  // console.log("data props home", navigation);
 
   const renderItem = ({item, index}, parallaxProps) => {
     return (
@@ -138,12 +140,15 @@ const Home = (props) => {
         
           <View style={styles.listBook}>
             <Text style={styles.titleListBook}>List Book</Text>
-              <View style={styles.dataBook}>
+
+              
+              <View style={styles.dataBook} >
                 <Image
+                onPress={() => console.log("data press")}
                   style={{ width: 200, height: 200, marginBottom : 18 }}
                   source={{ uri: 'https://picsum.photos/700' }}
                 />
-                <Title style={styles.titleBook}>Card title</Title>
+                <Title style={styles.titleBook} onPress={() => navigation.navigate('DetailScreen')}>Card title Detail</Title>
                 <Paragraph style={styles.descBook}>Card content</Paragraph>
                 <NumberFormat 
                   value='50000' 
@@ -154,6 +159,7 @@ const Home = (props) => {
                       value => <Text style={styles.priceBook}>{value}</Text>
                   } />
               </View>
+
               <View style={styles.dataBook}>
               <Image
                 style={{ width: 200, height: 200, marginBottom : 18 }}

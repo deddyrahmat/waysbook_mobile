@@ -29,6 +29,7 @@
  import Home from '../components/Home';
 import Profile from '../components/Profile';
 import Cart from '../components/Cart';
+import Detail from '../components/Detail';
  
   const CartStackNavigator = () => {
     return (
@@ -50,6 +51,7 @@ import Cart from '../components/Cart';
   return (
    <Stack.Navigator>
      <Stack.Screen name="HomeScreen" component={Home} options={{title : "Home"}}  />
+     <Stack.Screen name="DetailScreen" component={Detail} options={{title : "Detail"}}  />
    </Stack.Navigator>
   );
 };
