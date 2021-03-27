@@ -55,6 +55,7 @@ const {width: screenWidth} = Dimensions.get('window');
 
 const Home = (props) => {
 
+  // untuk menghilangkan back arrow di header
   // props.navigation.setOptions({
   //   headerLeft: () => {
   //     return null;

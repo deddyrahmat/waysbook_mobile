@@ -33,7 +33,9 @@ import {
 // component
 import Login from './components/Login';
 import Register from './components/Register';
-import Home from './components/Home';
+// import Home from './components/Home';
+
+import BottomTabNavigator from './navigator/TabNavigator'
 
 
 const App = () => {
@@ -44,7 +46,7 @@ const App = () => {
         <Stack.Navigator>
           <Stack.Screen name="LoginScreen" component={Login}  />
           <Stack.Screen name="RegisterScreen" component={Register}  />
-          <Stack.Screen name="HomeScreen" component={Home} options={{title : "Home"}}  />
+          <Stack.Screen name="Home" component={BottomTabNavigator} options={{ headerShown: false }}  />
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>

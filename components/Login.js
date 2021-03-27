@@ -35,7 +35,7 @@ const Login = ({navigation}) => {
 
             <Text style={[styles.text, styles.link, { textAlign: "right" }]}>Forgot Password?</Text>
 
-            <TouchableOpacity style={styles.submitContainer} onPress={() => navigation.navigate('HomeScreen')}>
+            <TouchableOpacity style={styles.submitContainer} onPress={() => navigation.navigate('Home')}>
               <Text style={[styles.text, {color: "#fff", fontWeight : "600", fontSize : 16}]} >
                 Login
               </Text>
