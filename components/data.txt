@@ -1,0 +1,3 @@
+headerHome : kiri(kosong)  kanan(cart),
+headerEtc : kiri(backArrow)  kanan(cart),
+bottomTab : Home, Profile, History
